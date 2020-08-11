@@ -9,6 +9,7 @@ module.exports = {
     },
     output: {
         filename: "scripts/[name].[chunkhash:5].js"
+        //emit的时候 asserts里面的key 就是"scripts/a.[chunkhash:5].js“
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -20,7 +21,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./public/index.html",
             filename: "a.html",
-            chunks: ["a"]
+            chunks: ["a"] // 使用哪个chunk打包出来的js
         })
     ]
 }

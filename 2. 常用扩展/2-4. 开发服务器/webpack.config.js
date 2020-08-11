@@ -14,11 +14,12 @@ module.exports = {
     ],
     devServer: {
         port: 8000,
-        open: true,
+        open: true, // 自动在浏览器打开
+        // index: 在浏览器打开的时候默认打开哪个文件
         proxy: { //代理规则
             "/api": {
                 target: "http://open.duyiedu.com",
-                changeOrigin: true //更改请求头中的host和origin
+                changeOrigin: true // 更改请求头中的host和origin,否则请求头中还是的host和origin还是localhost:8000
             }
         }
     },
