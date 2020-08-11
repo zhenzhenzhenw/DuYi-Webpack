@@ -81,10 +81,21 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./src/a.js":
+/*!******************!*\
+  !*** ./src/a.js ***!
+  \******************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+console.log("aaaa")
+
+/***/ }),
 
 /***/ "./src/index.js":
 /*!**********************!*\
@@ -93,8 +104,22 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var a = 1; // 在做抽象语法树分析的时候会报错，就是编译阶段，如果就是想这么写的话，可以使用loader\n// var b = 3\n// require(\"./a\")\n\n//# sourceURL=webpack:///./src/index.js?");
+console.log("index")
+
+/***/ }),
+
+/***/ 0:
+/*!***************************************!*\
+  !*** multi ./src/a.js ./src/index.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./src/a.js */"./src/a.js");
+module.exports = __webpack_require__(/*! ./src/index.js */"./src/index.js");
+
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=a.6899b.js.map
