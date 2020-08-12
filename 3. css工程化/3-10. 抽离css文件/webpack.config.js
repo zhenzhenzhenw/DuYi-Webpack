@@ -14,6 +14,7 @@ module.exports = {
     module: {
         rules: [
             {
+                // 不使用style-loader了
                 test: /\.css$/, use: [MiniCssExtractPlugin.loader, "css-loader?modules"]
             },
             {
@@ -34,6 +35,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./public/index.html"
         }),
+        // 生成css文件
         new MiniCssExtractPlugin({
             filename: "css/[name].[contenthash:5].css"
         })

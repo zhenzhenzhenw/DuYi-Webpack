@@ -19,3 +19,6 @@ module.exports = {
         })
     ]
 }
+
+// 下载 postcss-loader 和 postcss
+// 和less一样 ，不用下载命令行
