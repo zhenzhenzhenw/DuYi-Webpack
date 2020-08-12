@@ -10,7 +10,7 @@ module.exports = {
                 //     options: {
                 //         // modules: {
                 //         //     localIdentName: "[local]-[hash:5]"
-                //         // }
+                //         // } [name]文件名 [local]类名
                 //         modules:true
                 //     }
                 // }]

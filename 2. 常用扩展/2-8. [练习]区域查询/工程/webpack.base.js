@@ -1,5 +1,6 @@
 //公共配置
 const path = require("path")
+// const CleanWebpackPlugin = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const CopyWebpackPlugin = require("copy-webpack-plugin")
 module.exports = {
@@ -16,10 +17,11 @@ module.exports = {
         }
     },
     stats: {
-        modules: false,
+        modules: false, // 不打印模块的打包
         colors: true
     },
     plugins: [
+        // new CleanWebpackPlugin(),开发环境下面不会打包到dist，因此不需要清空
         new HtmlWebpackPlugin({
             template: "./public/list.html",
             filename: "list.html",
